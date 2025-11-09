@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TURINCEL | Tecnología y Reparación</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #0056b3;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .producto {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TURINCEL</h1>
+    <p>Reparación y venta de tecnología</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Productos</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <main>
+    <h2>Bienvenido a TURINCEL</h2>
+    <p>Tu aliado en reparación de celulares, venta de tecnología y accesorios.</p>
+
+    <section class="productos">
+      <div class="producto">
+        <h3>Reparación de celulares</h3>
+        <p>Diagnóstico y reparación profesional de todas las marcas.</p>
+      </div>
+      <div class="producto">
+        <h3>Accesorios</h3>
+        <p>Cargadores, audífonos, cables y más productos originales.</p>
+      </div>
+      <div class="producto">
+        <h3>Venta de tecnología</h3>
+        <p>Celulares, tablets, relojes inteligentes y más dispositivos.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>📍 TURINCEL - Tu centro tecnológico de confianza</p>
+  </footer>
+</body>
+</html>
