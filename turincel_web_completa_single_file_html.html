@@ -1,295 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>TURINCEL — Reparación y venta de teléfonos y tecnología</title>
-  <meta name="description" content="TURINCEL: Servicio profesional de reparación de teléfonos, venta de accesorios y tecnología. Atención personalizada, piezas originales y garantía.">
-  <meta name="author" content="TURINCEL">
-  <meta property="og:title" content="TURINCEL — Reparación y venta de teléfonos" />
-  <meta property="og:description" content="Reparamos y vendemos teléfonos, accesorios y tecnología. Repuestos originales y garantía." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TURINCEL | Tecnología y Reparación</title>
   <style>
-    :root{--brand:#0b6cf2;--dark:#0f1724;--muted:#6b7280;--card:#ffffff;--glass:rgba(255,255,255,0.06);--radius:12px}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;margin:0;background:linear-gradient(180deg,#f7fbff 0%, #ffffff 100%);color:var(--dark);-webkit-font-smoothing:antialiased}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-
-    /* header */
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:52px}
-    nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--dark);text-decoration:none;font-weight:600}
-    .cta{background:var(--brand);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
-
-    /* hero */
-    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:36px 0}
-    .hero-left h1{font-size:28px;margin:0 0 12px}
-    .hero-left p{color:var(--muted);margin:0 0 18px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(15,23,36,0.06)}
-
-    /* services & products */
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
-    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .service{padding:12px;border-radius:10px;border:1px solid #eef2ff}
-
-    .products{display:flex;overflow:hidden;gap:12px}
-    .product{min-width:220px;padding:12px;border-radius:12px;border:1px solid #e6eefc;display:flex;flex-direction:column;gap:8px}
-    .product img{width:100%;height:140px;object-fit:cover;border-radius:8px}
-
-    /* testimonials */
-    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .testimony{padding:12px;border-radius:10px;border:1px solid #f0f4ff}
-
-    /* contact */
-    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    form input, form textarea{padding:10px;border-radius:8px;border:1px solid #dfe8ff}
-    form textarea{grid-column:1 / -1;min-height:120px}
-    .form-actions{grid-column:1 / -1;display:flex;gap:12px;justify-content:flex-end}
-
-    footer{margin-top:28px;padding:20px 0;color:var(--muted);font-size:14px;border-top:1px solid #eef2ff}
-
-    /* responsive */
-    @media(min-width:880px){.hero{grid-template-columns:1fr 420px}.grid{grid-template-columns:1fr 420px}.testimonials{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:879px){nav{display:none}.grid{grid-template-columns:1fr}.testimonials{grid-template-columns:1fr}.hero-left h1{font-size:24px}.container{padding:16px}form{grid-template-columns:1fr}}
-
-    /* simple slider controls */
-    .slider-controls{display:flex;gap:8px;align-items:center}
-    .btn{background:#fff;border:1px solid #e6eefc;padding:8px;border-radius:8px;cursor:pointer}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #0056b3;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .producto {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <!-- Reemplaza la ruta del logo por tu archivo -->
-        <img src="/assets/logo-turincel.png" alt="TURINCEL logo" />
-        <div>
-          <div style="font-weight:700">TURINCEL</div>
-          <div style="font-size:12px;color:var(--muted)">Reparación y venta de teléfonos</div>
-        </div>
+  <header>
+    <h1>TURINCEL</h1>
+    <p>Reparación y venta de tecnología</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Productos</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <main>
+    <h2>Bienvenido a TURINCEL</h2>
+    <p>Tu aliado en reparación de celulares, venta de tecnología y accesorios.</p>
+
+    <section class="productos">
+      <div class="producto">
+        <h3>Reparación de celulares</h3>
+        <p>Diagnóstico y reparación profesional de todas las marcas.</p>
       </div>
-
-      <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
-        <a class="cta" href="#cotizar">Cotizar</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero-left">
-          <h1>Reparaciones profesionales y tecnología confiable</h1>
-          <p>En TURINCEL reparamos tu teléfono con piezas de calidad, vendemos accesorios y dispositivos con garantía. Servicio local, rápido y seguro.</p>
-          <div class="hero-actions">
-            <a class="cta" href="#contacto">Solicitar presupuesto</a>
-            <a href="#productos" style="padding:10px 14px;border-radius:10px;border:1px solid #e6eefc;text-decoration:none;font-weight:600">Ver productos</a>
-          </div>
-
-          <div class="grid" style="margin-top:22px">
-            <div class="card">
-              <h3>Servicios destacados</h3>
-              <div class="services" id="servicios">
-                <div class="service">
-                  <strong>Reparación de pantalla</strong>
-                  <div style="color:var(--muted);font-size:13px">Repuestos originales, diagnóstico gratuito.</div>
-                </div>
-                <div class="service">
-                  <strong>Reparación placa</strong>
-                  <div style="color:var(--muted);font-size:13px">Diagnóstico avanzado y reparación electrónica.</div>
-                </div>
-                <div class="service">
-                  <strong>Recuperación de datos</strong>
-                  <div style="color:var(--muted);font-size:13px">Recuperamos fotos y archivos importantes.</div>
-                </div>
-                <div class="service">
-                  <strong>Venta de accesorios</strong>
-                  <div style="color:var(--muted);font-size:13px">Cargadores, fundas, protectores y más.</div>
-                </div>
-              </div>
-            </div>
-
-            <aside class="card">
-              <h3>Horario</h3>
-              <div>Lun - Vie: 9:00 - 18:00<br>Sáb: 9:00 - 14:00</div>
-              <hr style="margin:12px 0;border:none;border-top:1px solid #f0f6ff">
-              <div style="font-weight:600">Ubicación</div>
-              <div style="color:var(--muted);font-size:13px">Tu dirección aquí, Ciudad — Colombia</div>
-            </aside>
-          </div>
-        </div>
-
-        <div class="card" style="min-height:260px;display:flex;flex-direction:column;gap:12px;justify-content:center;align-items:center">
-          <!-- Imagen o mockup del servicio / tienda -->
-          <img src="/assets/hero-phone.jpg" alt="Reparación teléfono" style="width:100%;height:220px;object-fit:cover;border-radius:10px" />
-          <div style="color:var(--muted);font-size:13px">Confía en nuestros técnicos certificados.</div>
-        </div>
-      </section>
-
-      <section style="margin-top:26px">
-        <h2 id="productos">Productos destacados</h2>
-        <div class="products card" style="margin-top:12px;overflow:hidden">
-          <!-- Rellena con tus productos reales -->
-          <div class="product">
-            <img src="/assets/product-1.jpg" alt="Producto 1">
-            <strong>Smartphone Modelo X</strong>
-            <div style="color:var(--muted);font-size:13px">Nuevo, 128GB — 1 año de garantía</div>
-            <div style="margin-top:auto;font-weight:700">$XXX.XXX</div>
-          </div>
-
-          <div class="product">
-            <img src="/assets/product-2.jpg" alt="Producto 2">
-            <strong>Audífonos Inalámbricos</strong>
-            <div style="color:var(--muted);font-size:13px">Cancelación de ruido</div>
-            <div style="margin-top:auto;font-weight:700">$XX.XXX</div>
-          </div>
-
-          <div class="product">
-            <img src="/assets/product-3.jpg" alt="Producto 3">
-            <strong>Cargador Rápido 45W</strong>
-            <div style="color:var(--muted);font-size:13px">USB-C, 2 puertos</div>
-            <div style="margin-top:auto;font-weight:700">$XX.XXX</div>
-          </div>
-
-          <div class="product">
-            <img src="/assets/product-4.jpg" alt="Producto 4">
-            <strong>Protector de vidrio templado</strong>
-            <div style="color:var(--muted);font-size:13px">6H resistencia</div>
-            <div style="margin-top:auto;font-weight:700">$X.XXX</div>
-          </div>
-        </div>
-
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-          <div style="color:var(--muted);font-size:13px">Mostrando productos destacados</div>
-          <div class="slider-controls">
-            <button class="btn" id="prev">◀</button>
-            <button class="btn" id="next">▶</button>
-          </div>
-        </div>
-      </section>
-
-      <section style="margin-top:26px">
-        <h2>Testimonios</h2>
-        <div class="testimonials" style="margin-top:12px">
-          <div class="testimony card">
-            <strong>María G.</strong>
-            <div style="color:var(--muted);font-size:13px">Repararon la pantalla de mi celular en 2 horas y quedó como nueva. Muy recomendados.</div>
-          </div>
-          <div class="testimony card">
-            <strong>Carlos R.</strong>
-            <div style="color:var(--muted);font-size:13px">Excelente atención y garantía en repuestos.</div>
-          </div>
-          <div class="testimony card">
-            <strong>Ana P.</strong>
-            <div style="color:var(--muted);font-size:13px">Compré audífonos y funcionan perfecto. Buen precio.</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto" style="margin-top:26px">
-        <h2>Contacto y presupuesto</h2>
-        <div class="card" style="margin-top:12px">
-          <form id="contactForm">
-            <input type="text" name="nombre" placeholder="Nombre completo" required>
-            <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <input type="text" name="asunto" placeholder="Asunto (ej. reparación pantalla)" required>
-            <textarea name="mensaje" placeholder="Describe el problema o lo que deseas comprar" required></textarea>
-            <div class="form-actions">
-              <button type="reset" class="btn">Limpiar</button>
-              <button type="submit" class="cta">Enviar solicitud</button>
-            </div>
-          </form>
-          <div id="formMessage" style="margin-top:12px;color:var(--muted);font-size:14px"></div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-        <div>
-          © <span id="year"></span> TURINCEL — Reparación y venta de teléfonos. Todos los derechos reservados.
-        </div>
-        <div style="display:flex;gap:12px;align-items:center">
-          <div style="font-size:13px;color:var(--muted)">Síguenos:</div>
-          <!-- Reemplaza los enlaces por tus perfiles -->
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
-          <a href="#">WhatsApp</a>
-        </div>
+      <div class="producto">
+        <h3>Accesorios</h3>
+        <p>Cargadores, audífonos, cables y más productos originales.</p>
       </div>
-    </footer>
-  </div>
+      <div class="producto">
+        <h3>Venta de tecnología</h3>
+        <p>Celulares, tablets, relojes inteligentes y más dispositivos.</p>
+      </div>
+    </section>
+  </main>
 
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // simple products slider (scrolling container)
-    const products = document.querySelector('.products');
-    document.getElementById('next').addEventListener('click', ()=>{products.scrollBy({left:220,behavior:'smooth'})});
-    document.getElementById('prev').addEventListener('click', ()=>{products.scrollBy({left:-220,behavior:'smooth'})});
-
-    // small contact form handler
-    const form = document.getElementById('contactForm');
-    const msg = document.getElementById('formMessage');
-    form.addEventListener('submit', async (e)=>{
-      e.preventDefault();
-      msg.textContent = 'Enviando...';
-      const data = new FormData(form);
-      // Opción A: Envío a /contact.php (debes crear este script en tu hosting)
-      // Opción B: usar un servicio como Formspree, Getform o Netlify forms
-      try{
-        // Ejemplo usando fetch a /contact.php (ajusta según tu backend)
-        const res = await fetch('/contact.php', {method:'POST',body:data});
-        if(res.ok){
-          msg.style.color = 'green';
-          msg.textContent = 'Mensaje enviado. Te contactaremos pronto.';
-          form.reset();
-        } else {
-          throw new Error('Error servidor');
-        }
-      } catch(err){
-        msg.style.color = 'crimson';
-        msg.textContent = 'No fue posible enviar. Usa WhatsApp o llama al +57 300 0000000.';
-      }
-    });
-
-    // small accessibility improvement: focus outline for keyboard users
-    document.body.addEventListener('keydown', (e)=>{if(e.key==='Tab'){document.body.classList.add('show-focus')}});
-  </script>
-
-  <!-- JSON-LD LocalBusiness (ajusta datos antes de publicar) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "TURINCEL",
-    "image": "/assets/logo-turincel.png",
-    "@id": "",
-    "url": "https://tusitio.com",
-    "telephone": "+57 300 0000000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Tu dirección aquí",
-      "addressLocality": "Ciudad",
-      "addressRegion": "Departamento",
-      "postalCode": "000000",
-      "addressCountry": "CO"
-    },
-    "openingHours": ["Mo-Fr 09:00-18:00","Sa 09:00-14:00"],
-    "priceRange": "COP"
-  }
-  </script>
+  <footer>
+    <p>📍 TURINCEL - Tu centro tecnológico de confianza</p>
+  </footer>
 </body>
 </html>
